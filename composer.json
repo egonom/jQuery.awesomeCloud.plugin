@@ -1,0 +1,11 @@
+{
+  "name": "egonom/jQuery.awesomeCloud.plugin",
+  "description": "jQuery tag cloud plugin",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "egonom"
+    }
+  ]
+}
