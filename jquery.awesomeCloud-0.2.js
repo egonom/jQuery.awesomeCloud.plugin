@@ -1,4 +1,4 @@
-/*! 
+/*!
 jQuery.awesomeCloud v0.2 indyarmy.com
 by Russ Porosky
 IndyArmy Network, Inc.
@@ -219,6 +219,17 @@ Extra Thanks:
 					};
 					break;
 				case "star":
+					this.settings.shape = function (theta) {
+						// A 5-pointed star
+						var thetaDelta = ( theta + 0.955 ) % ( 2 * Math.PI / 10 );
+						if (( theta + 0.955 ) % ( 2 * Math.PI / 3 ) - ( 2 * Math.PI / 10 ) >= 0) {
+							return 1 / ( Math.cos(( 2 * Math.PI / 10 ) - thetaDelta) + 3.07768 * Math.sin(( 2 * Math.PI / 10 ) - thetaDelta) );
+						} else {
+							return 1 / ( Math.cos(thetaDelta) + 3.07768 * Math.sin(thetaDelta) );
+						}
+					};
+					break;
+				case "book":
 					this.settings.shape = function (theta) {
 						// A 5-pointed star
 						var thetaDelta = ( theta + 0.955 ) % ( 2 * Math.PI / 10 );
